@@ -1,7 +1,18 @@
-﻿# Cachehandler
+#﻿# Cachehandler
 
+The project is a lightweight caching solution that improves performance by storing and retrieving data efficiently. It offers a file-based storage approach with customizable expiration times, automatic removal of expired data, and ensures the cache folder is accessible and writable. Integrating this caching mechanism enhances application speed and reduces processing time.
 
- # How to use
+## Installation 
+
+```bash 
+composer require ftembe/cachehandler
+```
+Or 
+```bash
+git clone https://github.com/FTembe/Cachehandler.git
+```
+
+ ## How to use
  ```
 <?php
 
