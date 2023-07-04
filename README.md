@@ -1,4 +1,5 @@
-#﻿# Cachehandler
+
+## Cache handler 
 
 The project is a lightweight caching solution that improves performance by storing and retrieving data efficiently. It offers a file-based storage approach with customizable expiration times, automatic removal of expired data, and ensures the cache folder is accessible and writable. Integrating this caching mechanism enhances application speed and reduces processing time.
 
@@ -40,7 +41,12 @@ function fetchDataFromApi($endPoint =  'https://jsonplaceholder.typicode.com/pho
     return $response;
 }
 
-$cacheHandler = new Cachehandler('cache');
+/*
+You can create a folder to receive temporary data and pass it as a parameter when instantiating the CacheHandler class
+eg. $cacheHandler = new Cachehandler('cacheFolder');
+*/
+
+$cacheHandler = new Cachehandler();
 
 if ($cacheHandler->getDataLength('photos') != 5000){
     $store = $cacheHandler->store('photos', json_decode(fetchDataFromApi()), '1 hour');
